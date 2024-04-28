@@ -5,8 +5,6 @@ import DocContext from '@/context/docContext';
 const Sidebar = () => {
   const [isChecked, setIsChecked] = useState(false)
 
-
-
   const [highlightMessage, setHighlightMessage] = useState(false)
   const [highlightAccount, setHighlightAccount] = useState(false)
   const [highlightSetting, setHighlightSetting] = useState(false)
@@ -32,14 +30,18 @@ const Sidebar = () => {
     setIsChecked(!isChecked)
     setDocument(!isDocument)
   }
-  console.log(isDocument)
+
+
 
   return (
 
     <div className='p-4 flex flex-col justify-between items-center h-screen bg-[#222431] w-[11vh]'>
 
       <div className='flex flex-col gap-2 items-center'>
-        <span className='bg-[#363a46] h-14 w-14 rounded-full mt-2 mb-4'></span>
+
+        <span className='bg-[#363a46] h-14 w-14 rounded-full mt-2 mb-4 hover:cursor-pointer' ></span>
+
+
 
         {highlightMessage ?
           <span className='flex bg-[#1b1c21] w-[11vh]'>

@@ -70,7 +70,7 @@ const Message = (msgIndex) => {
                 <div className="flex mb-4 ">
                   <div className=" flex mr-2 justify-end items-end">
                     <span className=" h-16 w-16  mt-2 ">
-                      <img src="logo.png" alt="" />
+                      <img src="logo.png" className="animate-spin " alt="" />
                     </span>
                   </div>
                   <div class="max-w-[40%]  w-auto flex flex-col leading-1.5 p-4 border-gray-200 rounded-l-xl rounded-r-xl rounded-bl-none bg-[#969cc7] justify-center ">
