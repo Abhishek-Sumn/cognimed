@@ -91,6 +91,7 @@ const UserSection = () => {
         <div className={`w-[100%]  ${!expand && "hidden"}`}>
           {searchResults?.map((user, index) => (
               <section
+              key={index}
               onClick={() => handleSectionClick(user?.id)}
               className={`h-[20%] mt-4 flex flex-col gap-2 p-2 pl-10 justify-center
               hover:cursor-pointer 

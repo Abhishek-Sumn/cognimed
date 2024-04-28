@@ -42,11 +42,11 @@ const UserSection = () => {
         } duration-300 relative`}
       >
         <ChevronLeft
-          className={`absolute bg-white rounded-full -right-3 top-[50vh] border cursor-pointer ${
+          className={`absolute bg-[#31333f] rounded-full -right-3 top-[50vh] border cursor-pointer ${
             !expand && "rotate-180"
           }`}
-          size="2.5vh"
-          color="#080808"
+          size="2.8vh"
+          color="#FFFFFF"
           onClick={() => setexpand(!expand)}
         />
         <div className=" one-edge-shadow pb-1 ">
@@ -91,6 +91,7 @@ const UserSection = () => {
         <div className={`w-[100%]  ${!expand && "hidden"}`}>
           {searchResults?.map((user, index) => (
               <section
+              key={index}
               onClick={() => handleSectionClick(user?.id)}
               className={`h-[20%] mt-4 flex flex-col gap-2 p-2 pl-10 justify-center
               hover:cursor-pointer 

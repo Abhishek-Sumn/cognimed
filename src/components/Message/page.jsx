@@ -57,7 +57,7 @@ const Message = (msgIndex) => {
         </span>
         <div className="h-screen overflow-y-auto p-4 pb-36">
           {message?.map((element, index) => (
-            <>
+            <div key={index}>
               <div className="flex justify-end mb-4 ">
                 <div class="max-w-[40%]  w-auto flex flex-col leading-1.5 p-4 border-gray-200 rounded-l-2xl rounded-r-2xl rounded-br-none bg-[#2a2e3c] justify-center">
                   <p class="text-[85%] font-normal text-[#9da9d7]">
@@ -85,7 +85,7 @@ const Message = (msgIndex) => {
               ) : (
                 <></>
               )}
-            </>
+            </div>
           ))}
         </div>
       </div>
@@ -107,17 +107,6 @@ const Message = (msgIndex) => {
         <span className="bg-[#2f3451] h-12 w-12 rounded-full flex items-center justify-center">
           <Mic />
         </span>
-
-        {/*   <div>
-          <input
-            type="text"
-            id="first_name"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="John"
-            required
-          />
-        </div> */}
-        {/*    <span className="bg-[#363a46] h-12 w-12 rounded-full mt-2 mb-4"></span> */}
       </footer>
     </div>
   );
