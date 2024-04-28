@@ -4,10 +4,7 @@ import { SendHorizontal, Mic } from "lucide-react";
 
 const Message = (msgIndex) => {
   const [message, setMessage] = useState();
-  /*  [
-    { send: "lorem send", recieve: "lorem recieve" },
-    { send: "lorem2 send", recieve: "lorem 2 recieve" },
-  ] */
+ 
   const [input, setInput] = useState("");
   const [name, setName] = useState();
 
@@ -15,7 +12,7 @@ const Message = (msgIndex) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("/api/getchats");
+      const res = await fetch("/api/getdoc");
       const data = await res.json();
       setUsers(data);
       if (data.length > 0) {

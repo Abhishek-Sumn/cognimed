@@ -1,7 +1,7 @@
 "use client";
 import { Plus, ChevronLeft } from "lucide-react";
 import { useEffect, useState } from "react";
-import Message from "../Message/page";
+import DocumentMessage from "../DocumentMessage/page"
 const UserSection = () => {
   const [expand, setexpand] = useState(true);
   const [users, setUsers] = useState();
@@ -10,7 +10,7 @@ const UserSection = () => {
 
   useEffect(() => {
     const getUsers = async () => {
-      const res = await fetch("/api/getchats");
+      const res = await fetch("/api/getdoc");
       const resdata = await res.json();
       setUsers(resdata);
       setSearchResults(resdata)
@@ -105,7 +105,7 @@ const UserSection = () => {
         </div>
       </div>
       <div className=" w-full">
-        <Message msgIndex = {selectedSection}/>
+        <DocumentMessage msgIndex = {selectedSection}/>
       </div>
     </div>
   );

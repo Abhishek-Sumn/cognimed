@@ -1,12 +1,11 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { MessageSquare, User, Settings } from 'lucide-react';
+import DocContext from '@/context/docContext';
 const Sidebar = () => {
   const [isChecked, setIsChecked] = useState(false)
 
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked)
-  }
+
 
   const [highlightMessage, setHighlightMessage] = useState(false)
   const [highlightAccount, setHighlightAccount] = useState(false)
@@ -27,6 +26,14 @@ const Sidebar = () => {
     setHighlightMessage(false)
     setHighlightAccount(false)
   }
+
+  const { isDocument, setDocument } = useContext(DocContext);
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked)
+    setDocument(!isDocument)
+  }
+  console.log(isDocument)
+
   return (
 
     <div className='p-4 flex flex-col justify-between items-center h-screen bg-[#222431] w-[11vh]'>
